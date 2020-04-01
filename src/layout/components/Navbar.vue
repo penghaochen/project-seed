@@ -65,7 +65,7 @@
       async logout() {
         // async函数中使用await返回一个promise函数 等待返回后继续执行下面语句
         await this.$store.dispatch('user/LogOut')
-        this.$router.push("/login")
+        // this.$router.push("/login")
         // this.$router.push(`/login?redirect=${this.$route.fullPath}`)
       }
     }
