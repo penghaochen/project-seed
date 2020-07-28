@@ -11,7 +11,7 @@ export function getCookies(key) {
   return Cookies.get(key)
 }
 // 设置cookies
-export function setCookies(key ,value) {
+export function setCookies(key, value) {
   return Cookies.set(key, value)
 }
 // 删除cookies

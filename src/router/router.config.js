@@ -12,12 +12,12 @@ import store from '@/store/index' // 缓存数据
 Vue.use(Router)
 // 配置路由
 const RouterModel = new Router({
-  routes: [...home, 
+  routes: [...home,
     // 非匹配路由指向默认路由
     {
       path: '*',
       redirect: {
-        name: 'Lobby'
+        name: 'Home'
       }
     }]
 })

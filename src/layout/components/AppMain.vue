@@ -9,11 +9,11 @@
 <script>
 export default {
   name: 'AppMain',
-  props:{
+  props: {
     height: {
       type: String,
       default: '50'
-    },
+    }
   },
   computed: {
     key() {

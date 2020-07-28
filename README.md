@@ -1,5 +1,5 @@
-# openBankSeed
-    介绍：vue项目
+# object-pc-seed
+    介绍：vue种子项目
 
 ## Build Setup
 
@@ -9,7 +9,7 @@
 git clone XXXXX.git
 
 # 进入项目目录
-cd vue-admin-template
+cd XXXX
 
 # 安装依赖
 npm install

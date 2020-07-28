@@ -1,9 +1,9 @@
 /**
  * @description 可配参数文件(没用)
  */
-import defaultSettings from '@/settings/index'
+import defaultSettings from '@/settings/defaultSetting'
 
-const { showSettings, tagsView,fixedHeader, sidebarLogo } = defaultSettings
+const { showSettings, tagsView, fixedHeader, sidebarLogo } = defaultSettings
 
 const state = {
   showSettings: showSettings,

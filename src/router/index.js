@@ -12,7 +12,6 @@ Vue.use(Router)
 /* 布局模板 */
 import Layout from '@/layout'
 
-
 /**
  *
  * @description 所有页面的路由表
@@ -55,7 +54,7 @@ export const constantRoutes = [
       meta: { title: '后管系统首页', icon: 'dashboard' }
     }]
   },
-    // 错误页面
+  // 错误页面
   {
     path: '/404',
     component: () => import('@/views/404'),
@@ -65,14 +64,14 @@ export const constantRoutes = [
       isAuth: false
     }
   },
-    // 无路由统一跳转页面
+  // 无路由统一跳转页面
   { path: '*', redirect: '/404', hidden: true }
 ]
 
 // 路由实例化
 const createRouter = () => new Router({
   // mode: 'history', // 路由模式 history or hash默认hash
-  scrollBehavior: () => ({ y: 0 }),//路由跳转到指定位置
+  scrollBehavior: () => ({ y: 0 }), // 路由跳转到指定位置
   routes: constantRoutes
 })
 

@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import settings from '@/settings/index' // 获取公共参数
+import settings from '@/settings/defaultSetting' // 获取公共参数
 export default {
   name: 'SidebarLogo',
   props: {
@@ -29,8 +29,8 @@ export default {
       logo: require('@/assets/logo.png')
     }
   },
-  mounted(){
-    this.title=settings.title;
+  mounted() {
+    this.title = settings.title
   }
 }
 </script>

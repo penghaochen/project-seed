@@ -1,7 +1,7 @@
 'use strict'
 const path = require('path')
 const webpack = require('webpack')
-const defaultSettings = require('./src/settings/index.js')
+const defaultSettings = require('./src/settings/defaultSetting.js')
 
 function resolve(dir) {
   return path.join(__dirname, dir)

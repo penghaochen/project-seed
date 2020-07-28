@@ -1,7 +1,6 @@
 import request from '@/libs/request'
 import { getToken } from '@/libs/util'
 
-
 /**
  * 登出
  */

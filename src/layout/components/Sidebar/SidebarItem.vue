@@ -30,11 +30,11 @@ import { isExternal } from '@/utils/validate'
 import Item from './Item'
 import AppLink from './Link'
 import FixiOSBug from './FixiOSBug'
-import elSubmenu from "@/components/Menu/src/submenu";
-import elMenuItem from "@/components/Menu/src/menu-item";
+import elSubmenu from '@/components/Menu/src/submenu'
+import elMenuItem from '@/components/Menu/src/menu-item'
 export default {
   name: 'SidebarItem',
-  components: { Item, AppLink ,elSubmenu,elMenuItem},
+  components: { Item, AppLink, elSubmenu, elMenuItem },
   mixins: [FixiOSBug],
   props: {
     // route object

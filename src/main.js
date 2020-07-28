@@ -3,9 +3,8 @@
  * @author digua
  * @version 0.1.0
  */
-import '@babel/polyfill'
-import Vue from 'vue'
-
+import Vue from 'vue' // vue核心包
+import '@babel/polyfill' // 兼容旧浏览器
 import 'normalize.css/normalize.css' // 保持浏览器的一些默认样式
 import '@/styles/index.scss' // 公共样式
 import '@/styles/base.scss' // 公共样式
@@ -42,12 +41,15 @@ if (process.env.NODE_ENV === 'development') {
 // 注册全局容器
 Vue.component('basicContainer', basicContainer)
 
-
 // 注册elementui框架 设置国际化
 // Vue.use(ElementUI, {
 // })
 // 是否启动生产信息提示
 Vue.config.productionTip = false
+/**
+ * @description 全局注册应用配置
+ */
+Vue.prototype.$config = config
 // vue实例化
 // new Vue({
 //   el: '#app',
@@ -55,7 +57,6 @@ Vue.config.productionTip = false
 //   store,
 //   render: h => h(App)
 // })
-
 
 const opt = {
   router,

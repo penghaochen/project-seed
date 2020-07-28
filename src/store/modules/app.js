@@ -5,7 +5,7 @@ import Cookies from 'js-cookie'
 
 const state = {
   sidebar: {
-    opened: Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true,// 左侧菜单栏显示状态 true:显示 false:不显示
+    opened: Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true, // 左侧菜单栏显示状态 true:显示 false:不显示
     withoutAnimation: false // 展开收起菜单是否有动态效果 true:无，false:有
   },
   device: 'desktop'// 获取设备标识 pc：desktop 手机：mobile

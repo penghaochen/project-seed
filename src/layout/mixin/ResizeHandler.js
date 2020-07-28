@@ -23,13 +23,13 @@ export default {
   mounted() {
     const isMobile = this.$_isMobile()
     if (isMobile) {
-      //是否是手机模式
+      // 是否是手机模式
       store.dispatch('app/toggleDevice', 'mobile')
       store.dispatch('app/closeSideBar', { withoutAnimation: true })
     }
   },
   methods: {
-    
+
     $_isMobile() {
       const rect = body.getBoundingClientRect()
       return rect.width - 1 < WIDTH

@@ -1,74 +1,51 @@
 const silderMenus = [
   {
-    path: "/system",
+    path: '/',
     meta: {
-      title: "系统管理",
-      icon: "example"
+      title: '系统管理',
+      icon: 'example'
     },
     children: [
+
       {
-        path: "app/index",
+        path: 'app/index',
         meta: {
-          title: "应用管理",
-          icon: "table"
+          title: '测试1',
+          icon: 'table'
         }
-      },{
-        path: "user/index",
+      }, {
+        path: 'user/index',
         meta: {
-          title: "用户管理",
-          icon: "table"
-        }
-      },{
-        path: "developer/index",
-        meta: {
-          title: "开发者管理",
-          icon: "table"
-        }
-      },{
-        path: "menus/index",
-        meta: {
-          title: "功能菜单",
-          icon: "table"
-        }
-      },{
-        path: "role/index",
-        meta: {
-          title: "角色管理",
-          icon: "table"
+          title: '测试2',
+          icon: 'table'
         }
       }
-      
+
     ]
   },
   {
-    path: "/sys",
+    path: '/sys',
     meta: {
-      title: "工具组件",
-      icon: "example"
+      title: '工具组件',
+      icon: 'example'
     },
     children: [
       {
-        path: "empty",
+        path: 'empty',
         meta: {
-          title: "测试用具",
-          icon: "table"
+          title: '测试用具',
+          icon: 'table'
         }
-      },
-      
-    ]
-  },
+      }
 
-];
+    ]
+  }
+
+]
 
 const navbarMenus = [{
-  path: "/",
-  title: "回到首页",
-}, {
-  path: "",
-  title: "密码管理",
-}, {
-  path: "",
-  title: "相关文档",
+  path: '/',
+  title: '回到首页'
 }]
 // 左侧菜单数据
 export function getSilderMenus() {

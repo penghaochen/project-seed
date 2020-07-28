@@ -9,7 +9,7 @@
         <navbar />
         <tags-view v-if="needTagsView" />
       </div>
-      <app-main :height="needTagsView?'90':'54'"/>
+      <app-main :height="needTagsView?'90':'54'" />
 
     </div>
   </div>
@@ -20,7 +20,7 @@
  * @description 布局模板
  */
 
-import { Navbar, Sidebar, AppMain ,TagsView} from './components'
+import { Navbar, Sidebar, AppMain, TagsView } from './components'
 import ResizeMixin from './mixin/ResizeHandler'
 import { mapState } from 'vuex'
 

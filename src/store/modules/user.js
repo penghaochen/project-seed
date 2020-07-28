@@ -2,18 +2,18 @@
  * @description 用户信息配置
  */
 
-import {setStore,removeStore} from '@/utils/store'
+import { setStore, removeStore } from '@/utils/store'
 const state = {
   userInfo: {},
   permissions: {},
   roles: [],
   name: '',
   avatar: '',
-  access_token:'',
-  expires_in:'',
-  refresh_token:'',
-  isLock:false,
-  lockPasswd:''
+  access_token: '',
+  expires_in: '',
+  refresh_token: '',
+  isLock: false,
+  lockPasswd: ''
 }
 const mutations = {
   // 存储access_token ，记录用户token
@@ -77,66 +77,62 @@ const mutations = {
     removeStore({
       name: 'isLock'
     })
-  },
+  }
 
 }
 
 const actions = {
-  GetUserInfo({commit}) {
-    
+  GetUserInfo({ commit }) {
     return new Promise((resolve, reject) => {
-      
       // fetchDo('/admin/user/info',"",'get').then(res => {
-        
-        // const data = res.data.data || {}
-        // commit('SET_USERIFNO', data.sysUser)
-        // commit('SET_ROLES', data.roles || [])
-        // commit('SET_PERMISSIONS', data.permissions || [])
-        // resolve(data)
-        resolve()
+
+      // const data = res.data.data || {}
+      // commit('SET_USERIFNO', data.sysUser)
+      // commit('SET_ROLES', data.roles || [])
+      // commit('SET_PERMISSIONS', data.permissions || [])
+      // resolve(data)
+      resolve()
       // }).catch((err) => {
       //   reject()
       // })
-
     })
   },
   // 刷新token
-  RefreshToken({commit, state}) {
+  RefreshToken({ commit, state }) {
     return new Promise((resolve, reject) => {
       // refreshToken(state.refresh_token).then(response => {
-        // const data = response.data
-        // commit('SET_ACCESS_TOKEN', data.access_token)
-        // commit('SET_REFRESH_TOKEN', data.refresh_token)
-        // commit('SET_EXPIRES_IN', data.expires_in)
-        // commit('CLEAR_LOCK')
-        resolve()
+      // const data = response.data
+      // commit('SET_ACCESS_TOKEN', data.access_token)
+      // commit('SET_REFRESH_TOKEN', data.refresh_token)
+      // commit('SET_EXPIRES_IN', data.expires_in)
+      // commit('CLEAR_LOCK')
+      resolve()
       // }).catch(error => {
       //   reject(error)
       // })
     })
   },
   // 登出
-  LogOut({commit}) {
+  LogOut({ commit }) {
     return new Promise((resolve, reject) => {
-      resolve()
       // logout().then(() => {
-      //   commit('SET_MENU', [])
-      //   commit('SET_PERMISSIONS', [])
-      //   // commit('SET_USER_INFO', {})
-        // commit('SET_ACCESS_TOKEN', '')
-        // commit('SET_REFRESH_TOKEN', '')
-        // commit('SET_EXPIRES_IN', '')
-        // commit('SET_ROLES', [])
-        // commit('DEL_ALL_TAG')
-      //   commit('CLEAR_LOCK')
-      //   resolve()
+      commit('SET_MENU', [])
+      commit('SET_PERMISSIONS', [])
+      // commit('SET_USER_INFO', {})
+      commit('SET_ACCESS_TOKEN', '')
+      commit('SET_REFRESH_TOKEN', '')
+      commit('SET_EXPIRES_IN', '')
+      commit('SET_ROLES', [])
+      commit('DEL_ALL_TAG')
+      commit('CLEAR_LOCK')
+      resolve()
       // }).catch(error => {
       //   reject(error)
       // })
     })
   },
   // 注销session
-  FedLogOut({commit}) {
+  FedLogOut({ commit }) {
     return new Promise(resolve => {
       commit('SET_MENU', [])
       commit('SET_PERMISSIONS', [])
@@ -148,13 +144,13 @@ const actions = {
       commit('CLEAR_LOCK')
       resolve()
     })
-  },
+  }
 }
-const user ={
+const user = {
   namespaced: true,
-  state:state,
-  mutations:mutations,
-  actions:actions
+  state: state,
+  mutations: mutations,
+  actions: actions
 }
 export default user
 

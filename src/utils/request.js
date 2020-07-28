@@ -5,17 +5,25 @@
  */
 import axios from 'axios'
 import store from '@/store'
-import {
-  baseUrl,
-  timeout,
-  headers
-} from '@/api/api.config'
-import router from '@/router/router.config'
-import { encrypt, decrypt } from '@/utils/encryption/aes' // aes加解密方法
+import $config from '@/settings/defaultSetting'
+let baseUrl = ''
+switch (process.env.NODE_ENV) {
+  case 'development':
+    // 这里是本地的请求url
+    baseUrl = $config.apiUrl.dev
+    break
+  case 'production':
+    // 生产环境url
+    baseUrl = $config.apiUrl.pro
+    break
+}
 // axios 配置
 const service = axios.create({
-  baseURL: baseUrl, // 请求根路径
-  timeout: timeout // 超时时间
+  // api的base_url
+  baseURL: baseUrl,
+  // 设置请求超时时间30s
+  headers: $config.apiUrl.headers,
+  timeout: $config.apiUrl.timeout
 })
 
 // request interceptor

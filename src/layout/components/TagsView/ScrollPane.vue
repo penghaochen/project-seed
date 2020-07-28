@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import elScrollbar from "@/components/Scrollbar/src/main";
+import elScrollbar from '@/components/Scrollbar/src/main'
 const tagAndTagSpacing = 4 // tagAndTagSpacing
 
 export default {
   name: 'ScrollPane',
-  components: {elScrollbar},
+  components: { elScrollbar },
   data() {
     return {
       left: 0
