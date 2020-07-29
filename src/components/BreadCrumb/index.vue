@@ -14,7 +14,7 @@ import pathToRegexp from 'path-to-regexp'
 import elBreadcrumb from './breadcrumb'
 import elBreadcrumbItem from './breadcrumb-item'
 export default {
-  components: { elBreadcrumb, elBreadcrumbItem},
+  components: { elBreadcrumb, elBreadcrumbItem },
   data() {
     return {
       levelList: null
